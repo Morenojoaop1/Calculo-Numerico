@@ -28,7 +28,7 @@ disp(U)
 disp(L*U)
 disp(A)
 
-// resolve L y = b: substituicao progressiva
+// L y = b
 y = zeros(1,n);
 y(1) = b(1)/L(1,1);
 for i=2:n
@@ -39,7 +39,7 @@ for i=2:n
     y(i) = (b(i)-soma)/L(i,i);
 end
 
-// resolve U x = y: substituicao regressiva
+// U x = y
 x(n) = y(n)/U(n,n);
 for i=n-1:-1:1
     soma = 0.0;
